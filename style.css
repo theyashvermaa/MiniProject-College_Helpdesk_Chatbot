@@ -1,0 +1,210 @@
+/* ===== BACKGROUND ===== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: url("Assets/kcc-img_2.jpg") center/cover no-repeat fixed;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: url("Assets/kcc-img_2.jpg") center/cover no-repeat fixed;
+}
+
+
+
+.college-brand {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.college-brand img {
+  width: 90px;
+  margin-bottom: 6px;
+}
+
+.college-brand h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+
+.chat-container {
+  margin: 10px auto 30px auto;
+}
+
+
+/* ===== CHAT CONTAINER ===== */
+.chat-container {
+  width: 430px;
+  margin: 35px auto;
+  background: rgba(95, 94, 94, 0.96);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.45);
+  z-index: 2;
+}
+
+/* ===== HEADER ===== */
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg,#c34242,#1e40af);
+  color: white;
+  padding: 14px;
+  font-weight: 600;
+}
+
+.logo {
+  height: 36px;
+}
+
+/* ===== CHAT BOX ===== */
+.chat-box {
+  height: 380px;
+  padding: 12px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== MESSAGES ===== */
+.user-msg {
+  align-self: flex-end;
+  background: #2563eb;
+  color: white;
+  padding: 9px 13px;
+  border-radius: 16px 16px 0 16px;
+  margin: 6px 0;
+  max-width: 75%;
+}
+
+.bot-msg {
+  align-self: flex-start;
+  background: linear-gradient(135deg, #c34242, #c34242);
+  color: #f9f9f9;
+  padding: 10px 14px;
+  border-radius: 18px 18px 18px 4px;
+  margin: 8px 6px;
+  max-width: 75%;
+  position: relative;
+  animation: botPop 0.25s ease-out;
+}
+
+/* BOT POINTER */
+.bot-msg::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 10px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #c34242;
+}
+
+/* POP ANIMATION */
+@keyframes botPop {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* ===== INPUT ===== */
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  outline: none;
+}
+
+.chat-input button {
+  padding: 12px 18px;
+  background: #1e40af;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===== SUGGESTIONS ===== */
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 12px;
+  margin-top: -6px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.suggestions button {
+  background: linear-gradient(135deg,#2563eb,#c34242);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  animation: fadeUp 0.3s ease forwards;
+  transition: all 0.25s ease;
+}
+
+.suggestions button:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+.typing {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 18px;
+}
+
+.typing span {
+  width: 7px;
+  height: 7px;
+  background-color: #fefefe; /* dark green, visible */
+  border-radius: 50%;
+  animation: typingBlink 1.4s infinite both;
+}
+
+.typing span:nth-child(1) {
+  animation-delay: 0s;
+}
+.typing span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.typing span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typingBlink {
+  0% { opacity: 0.2; }
+  20% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
