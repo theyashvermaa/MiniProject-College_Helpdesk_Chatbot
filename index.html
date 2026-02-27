@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KCCITM Virtual Helpdesk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- BACKGROUND BRANDING -->
+<div class="college-brand">
+  <img src="Assets/kcc-logo.jpg" alt="KCC Logo">
+  <h2>KCC Institute of Technology and Management</h2>
+</div>
+
+
+<div class="chat-container">
+  <div class="chat-header">
+    <img src="Assets/chatbot.webp" class="logo">
+    <span>Hi, I’m the Helpdesk Chatbot. <br>How can I help you today?</span>
+  </div>
+
+  <div class="chat-box" id="chatBox"></div>
+  <div class="suggestions" id="suggestions"></div>
+
+  <div class="chat-input">
+    <input type="text" id="userInput" placeholder="Type your message...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
